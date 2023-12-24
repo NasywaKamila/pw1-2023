@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Validation Form</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Validation Form</h1>
+  <form id="validationForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required maxlength="30"><br>
+    <div id="nameError" class="error-message"></div><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" required><br>
+    <div id="emailError" class="error-message"></div><br>
+
+    <label for="departureTime">Departure Time:</label>
+    <input type="text" id="departureTime" required><br>
+    <div id="departureTimeError" class="error-message"></div><br>
+
+    <label for="numTickets">Number of Tickets:</label>
+    <input type="number" id="numTickets" required min="1" max="10"><br>
+    <div id="numTicketsError" class="error-message"></div><br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <div id="dataSection">
+    <h2>Submitted Data:</h2>
+    <p><strong>Name:</strong> <span id="displayedName"></span></p>
+    <p><strong>Email:</strong> <span id="displayedEmail"></span></p>
+    <p><strong>Departure Time:</strong> <span id="displayedDepartureTime"></span></p>
+    <p><strong>Number of Tickets:</strong> <span id="displayedNumTickets"></span></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
